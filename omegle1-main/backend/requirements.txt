@@ -1,0 +1,63 @@
+# Core dependencies
+fastapi>=0.95.0
+uvicorn[standard]>=0.21.0
+python-dotenv>=1.0.0
+python-multipart>=0.0.5
+
+# WebSocket
+websockets>=10.4
+
+# ASGI server
+uvloop>=0.17.0
+
+# Security
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# CORS
+starlette>=0.26.0
+
+# Logging
+python-json-logger>=2.0.0
+
+# Development (optional)
+pytest>=6.2.5
+pytest-asyncio>=0.15.1
+httpx>=0.23.0
+pycodestyle==2.14.0
+pycparser==2.23
+pydantic==2.12.4
+pydantic_core==2.41.5
+pyflakes==3.4.0
+Pygments==2.19.2
+PyJWT==2.10.1
+pymongo==4.5.0
+pytest==9.0.1
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.1
+python-engineio==4.12.3
+python-jose==3.5.0
+python-multipart==0.0.20
+python-socketio==5.15.0
+pytokens==0.3.0
+pytz==2025.2
+requests==2.32.5
+requests-oauthlib==2.0.0
+rich==14.2.0
+rsa==4.9.1
+s3transfer==0.15.0
+s5cmd==0.2.0
+shellingham==1.5.4
+simple-websocket==1.1.0
+six==1.17.0
+sniffio==1.3.1
+starlette==0.37.2
+typer==0.20.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2025.2
+urllib3==2.5.0
+uvicorn==0.25.0
+watchfiles==1.1.1
+websockets==15.0.1
+wsproto==1.3.2

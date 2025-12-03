@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: omegle-backend
+    env: python
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: PORT
+        value: 10000
+      - key: HOST
+        value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        value: "*"
+    plan: free
+
+  - type: web
+    name: omegle-frontend
+    env: node
+    buildCommand: |
+      cd frontend
+      npm install --legacy-peer-deps
+      npm run build
+    startCommand: |
+      cd frontend
+      npm run serve
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+      - key: PORT
+        value: 3000
+      - key: REACT_APP_BACKEND_URL
+        value: https://omegle1-9zb1.onrender.com
+    plan: free
